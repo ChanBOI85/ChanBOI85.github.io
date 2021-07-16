@@ -1986,6 +1986,15 @@ section.bc-3 header.bc3-header {
     section.os-3 .os3-container {
         width: 90%;
     }
+
+    section.os-3 .os3-card .os3-card-container {
+        padding: 25px 10px;
+    }
+
+    section.os-3 .os3-card .os3-card-img {
+        width: 150px;
+        height: 150px;
+    }
 }
 
 @media only screen and (max-width: 611px) {
