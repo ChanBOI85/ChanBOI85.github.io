@@ -1,25 +1,31 @@
-// Cart Page
-$(document).ready(function() {
-    $('.minus').click(function () {
-        var $input = $(this).parent().find('input');
-        var count = parseInt($input.val()) - 1;
-        count = count < 1 ? 1 : count;
-        $input.val(count);
-        $input.change();
-        return false;
-    });
-    $('.plus').click(function () {
-        var $input = $(this).parent().find('input');
-        $input.val(parseInt($input.val()) + 1);
-        $input.change();
-        return false;
-    });
-});
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.querySelector(".navigation").style.left = "0";
+  } else {
+    document.querySelector(".navigation").style.left = "-110px";
+  }
 
-function menuOn() {
-    document.getElementById("menu").style.display = "block";
+  if (window.scrollY == 0 && window.innerWidth < 860) {
+    document.querySelector(".header-container").style.boxShadow = "none";
+    document.querySelector(".header-container").style.background = "rgba(242, 242, 242, 0.5)";
+
+  } else if (window.scrollY != 0 && window.innerWidth < 860) {
+    document.querySelector(".header-container").style.boxShadow = "1px 1px 12px 0px #7272725e";
+    document.querySelector(".header-container").style.background = "#f2f2f2";
+  } else if (window.innerWIdth > 860){
+    document.querySelector(".header-container").style.background = "none";
   }
-  
-  function menuOff() {
-    document.getElementById("menu").style.display = "none";
-  }
+
+  prevScrollpos = currentScrollPos;
+}
+
+
+function openNav() {
+  document.getElementById("mySidenav").style.right = "0px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.right = "-100%";
+}

@@ -5,26 +5,322 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400&family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="assets/fontawesome-free-5.15.3-web/css/all.css" rel="stylesheet">
+    <title>Spirit Bottling Group</title>
 </head>
 <body>
-    <div class="main">
-        <div class="nav-section">
-            <img src="assets/img/81306-middle.png" alt="logo">
+    <div class="wrapper">
+        <div class="navigation">
+            <nav>
+                <ul>
+                    <li><a href="book-a-call.html">BOOK A CALL</a></li>
+                    <li><a href="#">WHY US?</a></li>
+                    <li><a href="our-story.html">OUR STORY</a></li>
+                    <li><a href="brand.html">BRANDS</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li>
+                        <a href="/" class="logo-link">
+                            <div class="header-logo-container">
+                                <img src="assets/img/logo.svg" alt="Logo" class="header-logo">
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <div class="container-section">
-            <div class="container">
-                <h2>APP NAME</h2>
 
-                <form action="">
-                    <input type="text" name="username" placeholder="Username">
-                    <input type="password" name="password" placeholder="*****">
-                    <input type="submit" name="login" value="LOG IN">
-                </form>
-            </div>
-            <a href="register.html" class="link">Dont have an account? Sign up now</a>
-            <a href="app/index.html">Visit the app</a>
+        <div id="mySidenav" class="mobile-nav mobile">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="book-a-call.html">BOOK A CALL</a>
+            <a href="#">WHY US?</a>
+            <a href="our-story.html">OUR STORY</a>
+            <a href="brand.html">BRANDS</a>
+            <a href="#">ABOUT</a>
         </div>
+
+        <div class="header-container">
+            <div class="searchbar desktop">
+                <input type="text" name="search" id="searchbar" placeholder="Search...">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+
+            <div class="navigation-mobile mobile">
+                <div class="logo-container">
+                    <a href="/">
+                        <img src="assets/img/logo.svg" alt="website logo" class="header-logo">
+                    </a>
+                </div>
+                <div class="menu-mobile mobile">
+                    <i class="fas fa-bars" onclick="openNav()"></i>
+                </div>
+            </div>
+        </div>
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="hero-content-container">
+                    <div class="hero-text">
+                        <h1 style="color: #293E46;">FOR THE SPIRITS</h1>
+                        <h1 style="color: #EBAD53;">WORTH ITS SALT.</h1>
+                        <p>We are the distillery founded on the values of friendship, family, and faith. We honor the value of craftsmanship and taste above all. Our selections showcase the finest drinks Spartanburg has to offer.<p>
+                    </div>
+                    <div class="hero-img">
+                        <img src="assets/img/main.png" alt="hero-img-bottle">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-2">
+            <header class="section-header">Brands on Board.</header>
+            <div class="brand-slider">
+                <div class="brand-items">
+                    <div class="brand-item">
+                        <div class="brand-img">
+                            <img src="assets/img/2.png" alt="">
+                            <div class="brand-logo">
+                                <img src="assets/img/logo.svg" alt="">    
+                            </div>
+                        </div>
+                        <div class="brand-description">
+                            <h3>Company One</h3>
+                            <span>Special Feature</span>
+                            <a href="#">See More ></a>
+                        </div>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-img">
+                            <img src="assets/img/3.png" alt="">
+                            <div class="brand-logo">
+                                <img src="assets/img/logo.svg" alt="">    
+                            </div>
+                        </div>
+                        <div class="brand-description">
+                            <h3>Company Two</h3>
+                            <span>Special Feature</span>
+                            <a href="#">See More ></a>
+                        </div>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-img">
+                            <img src="assets/img/4.png" alt="">
+                            <div class="brand-logo">
+                                <img src="assets/img/logo.svg" alt="">    
+                            </div>
+                        </div>
+                        <div class="brand-description">
+                            <h3>Company Three</h3>
+                            <span>Special Feature</span>
+                            <a href="#">See More ></a>
+                        </div>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-img">
+                            <img src="assets/img/5.png" alt="">
+                            <div class="brand-logo">
+                                <img src="assets/img/logo.svg" alt="">    
+                            </div>
+                        </div>
+                        <div class="brand-description">
+                            <h3>Company Four</h3>
+                            <span>Special Feature</span>
+                            <a href="#">See More ></a>
+                        </div>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-img">
+                            <img src="assets/img/6.png" alt="">
+                            <div class="brand-logo">
+                                <img src="assets/img/logo.svg" alt="">    
+                            </div>
+                        </div>
+                        <div class="brand-description">
+                            <h3>Company Five</h3>
+                            <span>Special Feature</span>
+                            <a href="#">See More ></a>
+                        </div>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-img">
+                            <img src="assets/img/7.png" alt="">
+                            <div class="brand-logo">
+                                <img src="assets/img/logo.svg" alt="">    
+                            </div>
+                        </div>
+                        <div class="brand-description">
+                            <h3>Company Six</h3>
+                            <span>Special Feature</span>
+                            <a href="#">See More ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-3">
+            <div class="s3-overlay">
+                <div class="s3-container">
+                    <div class="s3-story-text">
+                        <header class="section-header">Our Story.</header>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <a href="#">Learn about SBG</a>
+                    </div>
+                    <div class="s3-story-icon">
+                        <img src="assets/img/logo-white.svg" alt="Logo">
+                    </div>
+                </div>
+            </div>  
+        </section>
+
+        <section class="section-4">
+            <div class="s4-container">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus iusto vero obcaecati accusamus asperiores aspernatur cupiditate sequi nemo tempora ullam? Maxime facere tempore alias totam eveniet, suscipit vero rerum! Autem?</p>
+
+                <div class="s4-goals">
+                    <div class="s4-goal">
+                        <h1>Vision.</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo suscipit id repellendus! Dolores id recusandae quibusdam obcaecati non corrupti maiores fugiat. </p>
+                    </div>
+                    <div class="s4-goal">
+                        <h1>Mission.</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo suscipit id repellendus! Dolores id recusandae quibusdam obcaecati non corrupti maiores fugiat. </p>
+                    </div>
+                    <div class="s4-goal">
+                        <h1>Goals.</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo suscipit id repellendus! Dolores id recusandae quibusdam obcaecati non corrupti maiores fugiat. </p>
+                    </div>
+                </div>
+
+                <div class="s4-why-choose">
+                    <div class="s4-wc-text">
+                        <h1>Why choose SBG?</h1>
+                        <button>See the offers</button>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, nemo nesciunt! Error, magnam. Eveniet doloremque voluptatibus quam. Quisquam ullam repellendus debitis ipsum? Fuga minima delectus, eum beatae nulla esse adipisci!</p>
+                    </div>
+                    <div class="s4-wc-img">
+                        <img src="assets/img/main.png" alt="bottle">
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="section-5">
+            <div class="s5-container">
+                <header class="section-header">Testimonials.</header>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea officiis accusamus consectetur ipsum eveniet doloribus alias, distinctio.</p>
+
+                <div class="s5-testimonials">
+                    <div class="testimonial-card">
+                        <div class="tc-image"></div>
+                        <div class="tc-container">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="tc-image"></div>
+                        <div class="tc-container">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="tc-image"></div>
+                        <div class="tc-container">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="tc-image"></div>
+                        <div class="tc-container">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="tc-image"></div>
+                        <div class="tc-container">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="tc-image"></div>
+                        <div class="tc-container">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-6">
+            <div class="s6-container">
+                <div class="s6-book">
+                    <div class="s6-book-text">
+                        <header class="section-header">Book a call.</header>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quisquam fugit aut modi corrupti, earum repudiandae itaque.</p>
+                    </div>
+                    <div class="s6-book-form">
+                        <form action="">
+                            <input type="email" placeholder="email">
+                            <input type="text" placeholder="name">
+                            <input type="submit" value="Select a Date" >
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <div class="footer-container">
+                <a href="#" class="back-to-top-link">
+                    <div class="back-to-top">
+                        <span class="fas fa-arrow-up"></span>
+                    </div>
+                </a>
+                <div class="footer-col-1">
+                    <h3 class="footer-header">SAY HI</h3>
+                    <h1>Have an idea for a drink?</h1>
+                    <p>Contact us at <a href="mailto:hello@spiritbottling.com">hello@spiritbottling.com</a></p>
+
+                    <span>© 2021 SPIRIT BOTTLING GROUP LIMITED</span>
+                </div>
+                <div class="footer-col-2">
+                    <h3 class="footer-header">INFO</h3>
+
+                    <ul class="footer-links">
+                        <li><a href="#">Help/FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col-3">
+                    <h3 class="footer-header">FOLLOW US</h3>
+
+                    <ul class="social-icons">
+                        <li>
+                            <a href="#">
+                                <span class="fab fa-facebook-square"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fab fa-twitter"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fab fa-instagram"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     </div>
+
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
