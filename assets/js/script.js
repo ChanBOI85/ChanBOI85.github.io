@@ -1,11 +1,30 @@
 var prevScrollpos = window.pageYOffset;
+const sections = document.querySelectorAll("section");
+const navLi = document.querySelectorAll("nav ul li");
+
 window.onscroll = function() {
 var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.querySelector(".navigation").style.left = "0";
-  } else {
-    document.querySelector(".navigation").style.left = "-110px";
-  }
+  // if (prevScrollpos > currentScrollPos) {
+  //   document.querySelector(".navigation").style.left = "0";
+  // } else {
+  //   document.querySelector(".navigation").style.left = "-130px";
+  // }
+
+  var current = "";
+  
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    if (window.scrollY >= sectionTop - 60) {
+      current = section.getAttribute("id"); 
+    }
+  });
+
+  navLi.forEach((li) => {
+    li.classList.remove("active");
+    if (li.classList.contains(current)) {
+      li.classList.add("active");
+    }
+  });
 
   if (window.scrollY == 0 && window.innerWidth < 860) {
     document.querySelector(".header-container").style.boxShadow = "none";
@@ -29,3 +48,4 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidenav").style.right = "-100%";
 }
+

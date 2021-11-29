@@ -2,15 +2,67 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    scroll-behavior: smooth;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+    opacity: 0
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
 }
 
 body {
-    background: #F2F2F2;
+    background:#ebae5333;
+    overflow-x: hidden;
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth !important;
 }
+
+table {
+    border-color: #414042 !important;
+    width: 350px !important;
+}
+
+table .img-container {
+    vertical-align:middle; 
+    text-align:center;
+}
+
 
 /* Age Confirm Section */
 div.age-confirm {
@@ -152,7 +204,6 @@ div.header-container {
     display:flex;
     justify-content: flex-end;
 	align-items:center;
-    padding: 50px 0px;
     position: relative;
     width: 90%;
     max-width: 1440px;
@@ -221,10 +272,7 @@ div.wrapper {
 section.hero-section {
     width: 100%;
     max-width: 1440px;
-    max-height: 918px;
     margin: auto;
-    margin-top: -50px;
-    height: 100vh;
     display: flex;
     align-items: center;
 }
@@ -257,7 +305,6 @@ div.navigation nav {
     -ms-writing-mode: vertical-lr;
     writing-mode: vertical-lr;
     transform: rotate(180deg);
-    background-color: rgba(255, 255, 255, 0.5);
     z-index: 100;
 
 }
@@ -271,25 +318,49 @@ div.navigation {
     left: 0;
     top: 0;
     bottom: 0;
-    z-index: 100
+    z-index: 100;
+    
 }
 
 div.navigation nav ul {
     display: flex;
     flex-flow: row;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
     width: 100%;
     height: 90vh;
     margin: auto;
+    padding-left: 25px
+    
 }
 
-div.navigation nav ul li {
+div.navigation nav ul li:not(.li-logo-container) {
     list-style: none;
     text-align: center;
     display: flex;
     align-items: center;
-    margin: auto 20px;
+    margin: auto 0px;
+    padding: 15px;
+    padding-right: 50px;
+    transition: 0.3s;
+    
+}
+
+div.navigation nav ul li:not(.li-logo-container):hover {
+    background: #EBAD53;
+    border-radius: 10% 0% 0% 10%;
+}
+
+div.navigation nav ul li:not(.li-logo-container):hover a {
+    color: white
+}
+
+div.navigation nav ul li.active {
+    background: #EBAD53;
+    border-radius: 10% 0% 0% 10%;
+}
+
+div.navigation nav ul li.active a {
+    color: white
 }
 
 div.navigation.overlay-black nav ul a {
@@ -299,7 +370,7 @@ div.navigation.overlay-black nav ul a {
 
 div.navigation nav ul li a {
     color: #293E46;
-    transition: color .5s;
+    transition: color .3s;
     display: block;
     text-decoration: none;
     font-weight: bold !important;
@@ -307,16 +378,12 @@ div.navigation nav ul li a {
     font-size: 16px
 }
 
-div.navigation nav ul li a:hover {
-    color: #EBAD53
-}
 
 section.hero-section .hero-content-container {
-    width: 80%;
+    width: 90%;
     margin: auto ;
     position: relative;
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
@@ -326,16 +393,23 @@ body.brand-page section.hero-section .hero-content-container {
     margin: 15% 0 0 auto;
 }
 
-section.hero-section .hero-content-container .hero-text {
-    width: 100%;
+section.hero-section .hero-content-container .hero-text h1.main-text {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 121px;
+    line-height: 91.03%;
+    margin-bottom: 20px;
+    color: #414042
 }
-section.hero-section .hero-content-container .hero-text h1 {
+
+section.hero-section .hero-content-container .hero-text h1.sub-text{
     font-family: 'Roboto Condensed', sans-serif;
     font-style: normal;
-    font-weight: 900;
-    font-size: 18vw;
+    font-weight: bold;
+    font-size: 40px;
     line-height: 88.53%;
-    margin: 0px
+    color: #EBAD53;
+    margin-bottom: 40px
 }
 
 body.brand-page section.hero-section .hero-content-container .hero-text h1 {
@@ -344,12 +418,11 @@ body.brand-page section.hero-section .hero-content-container .hero-text h1 {
 }
 
 section.hero-section .hero-content-container .hero-text p {
-    font-size: 20px;
+    font-size: 17px;
     font-family: 'Barlow', sans-serif;
     line-height: 140.62%;
-    margin-top: 60px;
-    margin-bottom: 0px;
-    width: 80%;
+    margin-bottom: 20px;
+    width: 100%;
     color: #293E46;
 }
 
@@ -372,6 +445,11 @@ section.hero-section .hero-content {
 section.hero-section .hero-content-container .hero-img {
     position: relative;
     z-index: -1;
+}
+
+section.hero-section .hero-content-container .hero-img-bottle {
+    -webkit-filter: drop-shadow(10px 10px 5px rgba(34, 34, 34, 0.719));
+    filter: drop-shadow(10px 10px 5px rgba(34, 34, 34, 0.719));
 }
 
 section.hero-section .hero-content-container .hero-img img {
@@ -517,12 +595,47 @@ section.section-2 .brand-description a:hover {
 
 /* Section 3 - Our Story */
 section.section-3 {
-    margin: 100px 0px;
-    background-image: url("../img/eight.jpg");
+    max-width: auto;
+    width: 100%;
+    margin: 100px 0px
+}
+section.section-3 .first-background {
+    background-image: url("../img/first-background.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #cccccc;
-    color: white
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 100px 50px;
+}
+
+section.section-3 .second-text {
+    padding: 100px 50px;
+    background-color: #EBAD53;
+    color: white;
+    font-size: 20px;
+    font-family: 'Barlow', sans-serif;
+}
+
+hr {
+    border: 1px solid #414042 !important;
+    width: 100%;
+}
+
+h1.main-header-dark {
+    font-weight: bold;
+    font-size: 80px;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #414042;
+}
+
+span.sub-heading {
+    font-weight: bold;
+    font-size: 23px;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #414042;
 }
 
 section.section-3 .s3-overlay {
@@ -591,6 +704,10 @@ section.section-4 {
     margin-bottom: 100px;
 }
 
+.modal {
+    transition: 0.3s ease-in-out;
+}
+
 section.section-4 .s4-container {
     width: 80%;
     margin: auto;
@@ -603,6 +720,79 @@ section.section-4 .s4-container > p {
     font-size: 26px;
     margin-bottom: 65px;
     color: #293E46;
+}
+
+.services {
+    margin: 50px 0px
+}
+
+.service-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    padding: 60px
+}
+
+.service-container:hover{
+    box-shadow: -2px 11px 23px rgba(181, 169, 141, 0.47)
+}
+
+.service-modal {
+    background-color: #EBAD53;
+    border-radius: 70px;
+    overflow: hidden;
+}
+
+.service-container .service-name {
+    margin-bottom: 30px;;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 37px;
+    color: #414042;
+}
+
+.service-container .service-description {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    color: #414042;
+    text-align: center;
+}
+
+.service-modal-text h1 {
+    color: white;
+}
+
+.service-modal-text hr {
+    border: 1px solid #FCFCF4 !important;
+    background-color: white;
+}
+
+.service-modal-text p {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: white
+}
+
+.close {
+    position: absolute !important;
+    right: 60px;
+    top: 20px;
+    font-size: 50px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+
+.service-container img{
+    margin-bottom: 50px
 }
 
 section.section-4 .s4-goals {
@@ -694,6 +884,33 @@ section.section-4 .s4-wc-img img {
 
 }
 
+/* Moonlight Special Jumbotron */
+#moonlight_special {
+    padding: 20px 150px;
+    height: 650px;
+    background-image: url('../img/jumbo-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 300px;
+}
+
+
+#moonlight_special h1 {
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 83px;
+    color: #EBAD53
+}
+
+#moonlight_special p.lead {
+    font-family: 'Barlow', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    color: #414042;
+}
+
 /* Section 5 */
 section.section-5 {
     width: 100%;
@@ -749,6 +966,58 @@ section.section-5 .tc-container {
     padding: 34px 0px
 }
 
+
+/* Contact Us */
+#contact-us {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+#contact-us .input-container {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0px;
+}
+
+#contact-form {
+    margin-top: 50px;
+}
+
+#contact-us .input-container label {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 23px;
+    color: #414042;
+    margin-bottom: 15px;
+}
+
+#contact-us .input-container input, #contact-us .input-container textarea {
+    border: 1px solid #414042;
+    box-sizing: border-box;
+    border-radius: 7px;
+    color: #414042;
+    background-color: transparent;
+    padding: 15px 20px;
+    font-family: 'Barlow', sans-serif;
+}
+
+#contact-us #submit {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    padding: 15px 50px;
+    margin-top: 50px;
+    transition: 0.3s;
+}
+
+#contact-us #submit:hover {
+    color: white;
+    background-color: #EBAD53;
+    border: 1px solid #EBAD53
+}
 
 /* Section - 6 */
 section.section-6 {
@@ -1228,7 +1497,7 @@ section.os-3 .os3-cards {
 }
 
 section.os-3 .os3-card {
-    margin: 10px 5px;
+    margin: 10px 20px;
 }
 
 section.os-3 .os3-card .os3-card-img {
@@ -1342,8 +1611,6 @@ section.os-5 .big-news-card-container {
     color: white;
     background-color: #293E46;
     width: 70%;
-    
-
 }
 
 section.os-5 span.author {
@@ -1575,9 +1842,6 @@ section.bc-3 header.bc3-header {
 
 /* Mobile Header Nav menu */
 @media only screen and (min-width: 1440px) {
-    section.hero-section .hero-content-container .hero-text h1 {
-        font-size: 100px !important
-    }
 
     section.hero-section .hero-content-container .hero-text p {
         font-size: 22px;
@@ -1981,19 +2245,6 @@ section.bc-3 header.bc3-header {
         width: 100%;
         margin: 20px 0px;
         padding: 48px;
-    }
-
-    section.os-3 .os3-container {
-        width: 90%;
-    }
-
-    section.os-3 .os3-card .os3-card-container {
-        padding: 25px 10px;
-    }
-
-    section.os-3 .os3-card .os3-card-img {
-        width: 150px;
-        height: 150px;
     }
 }
 
