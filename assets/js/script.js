@@ -4,11 +4,11 @@ const navLi = document.querySelectorAll("nav ul li");
 
 window.onscroll = function() {
 var currentScrollPos = window.pageYOffset;
-  // if (prevScrollpos > currentScrollPos) {
-  //   document.querySelector(".navigation").style.left = "0";
-  // } else {
-  //   document.querySelector(".navigation").style.left = "-130px";
-  // }
+  if (prevScrollpos > currentScrollPos) {
+    document.querySelector(".navigation").style.left = "0";
+  } else {
+    document.querySelector(".navigation").style.left = "-130px";
+  }
 
   var current = "";
   
