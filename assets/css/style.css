@@ -368,11 +368,15 @@ div.navigation nav ul li.active {
 }
 
 div.navigation nav ul li.active a {
-    color: white
+    color: white !important
 }
 
 div.navigation.overlay-black nav ul a {
     color: #FFFFFF
+}
+
+.invert {
+    filter: invert(100%);
 }
 
 
@@ -383,8 +387,13 @@ div.navigation nav ul li a {
     text-decoration: none;
     font-weight: bold !important;
     font-family: 'Barlow', sans-serif;
-    font-size: 16px
+    font-size: 16px;
 }
+
+div.navigation nav ul li a.dark-links {
+    color: #414042
+}
+
 
 
 section.hero-section .hero-content-container {

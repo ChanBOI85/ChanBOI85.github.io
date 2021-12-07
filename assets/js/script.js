@@ -15,7 +15,7 @@ var currentScrollPos = window.pageYOffset;
   sections.forEach((section) => {
     const sectionTop = section.offsetTop;
     if (window.scrollY >= sectionTop - 60) {
-      current = section.getAttribute("id"); 
+      current = section.getAttribute("id");
     }
   });
 
@@ -25,6 +25,14 @@ var currentScrollPos = window.pageYOffset;
       li.classList.add("active");
     }
   });
+
+  if (current === "our-story" || current === "moonlight_special") {
+    $("div.navigation nav ul li a").addClass("dark-links");
+    $(".header-logo").addClass("invert");
+  } else {
+    $("div.navigation nav ul li a").removeClass("dark-links");
+    $(".header-logo").removeClass("invert");
+  }
 
   if (window.scrollY == 0 && window.innerWidth < 860) {
     document.querySelector(".header-container").style.boxShadow = "none";
@@ -49,3 +57,6 @@ function closeNav() {
   document.getElementById("mySidenav").style.right = "-100%";
 }
 
+
+
+// Test Script
