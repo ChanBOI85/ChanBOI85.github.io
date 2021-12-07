@@ -632,7 +632,7 @@ section.section-2 .brand-description a:hover {
 section.section-3 {
     max-width: auto;
     width: 100%;
-    margin: 180px 0px 100px 0px
+    margin: 10px 0px 100px 0px
 }
 section.section-3 .first-background {
     background-image: url("../img/first-background.png");
