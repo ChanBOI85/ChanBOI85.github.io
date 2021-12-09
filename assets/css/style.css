@@ -484,10 +484,10 @@ section.hero-section .hero-container img {
 }
 
 section.hero-section .hero-label {
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 49px;
+    font-size: 40px;
     color: #EBAD53
 }
 
