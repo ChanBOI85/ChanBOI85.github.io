@@ -376,7 +376,7 @@ div.navigation.overlay-black nav ul a {
 }
 
 .invert {
-    filter: invert(80%);
+    filter: invert(100%);
 }
 
 
@@ -632,7 +632,7 @@ section.section-2 .brand-description a:hover {
 section.section-3 {
     max-width: auto;
     width: 100%;
-    margin: 10px 0px 100px 0px
+    margin: 0px 0px 100px 0px
 }
 section.section-3 .first-background {
     background-image: url("../img/first-background.png");
@@ -1980,7 +1980,7 @@ section.bc-3 header.bc3-header {
         z-index: 4;
         top: 0;
         right: -100%;
-        background-color: rgb(41, 62, 70);
+        background-color: #414042;
         overflow-x: hidden;
         transition: 0.5s;
         padding-top: 90px;
@@ -2350,5 +2350,85 @@ section.bc-3 header.bc3-header {
     section.hero-section .hero-content-container .hero-img img {
         height: 300px;
         width: auto;
+    }
+}
+
+#bg-video {
+    width: 100% !important
+}
+
+.videoContainer {
+    overflow: hidden;
+    height: 100vh;
+}
+
+#bgvideo {
+    width: 150%;
+}
+
+/* Tablet */
+
+@media only screen and (max-width: 768px) {
+    section.hero-section .hero-container img {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    #bgvideo {
+        width: 250% ;
+        height: 100vh;
+    }
+    
+    section.hero-section .hero-container {
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    section.hero-section .hero-container .hero-label {
+        font-size: 26px !important;
+    }
+
+    div.header-container {
+        background-color: transparent;
+    }
+
+    .menu-mobile.mobile i {
+        color: white
+    }
+
+
+    #moonlight_special { 
+        padding: 100px 0px;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 46px !important;
+    }
+
+
+    section.section-3 .second-text {
+        padding: 100px 20px
+    }
+
+
+    .footer-col-1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-col-2 {
+        text-align: center;
+    }
+
+    .footer-col-3 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
 }

@@ -28,19 +28,19 @@ var currentScrollPos = window.pageYOffset;
 
   if (current === "our-story" || current === "moonlight_special") {
     $("div.navigation nav ul li a").addClass("dark-links");
-    $(".header-logo").addClass("invert");
+    $(".header-logo.desktop").addClass("invert");
   } else {
     $("div.navigation nav ul li a").removeClass("dark-links");
-    $(".header-logo").removeClass("invert");
+    $(".header-logo.desktop").removeClass("invert");
   }
 
   if (window.scrollY == 0 && window.innerWidth < 860) {
     document.querySelector(".header-container").style.boxShadow = "none";
-    document.querySelector(".header-container").style.background = "rgba(242, 242, 242, 0.5)";
+    document.querySelector(".header-container").style.background = "transparent";
 
   } else if (window.scrollY != 0 && window.innerWidth < 860) {
     document.querySelector(".header-container").style.boxShadow = "1px 1px 12px 0px #7272725e";
-    document.querySelector(".header-container").style.background = "#f2f2f2";
+    document.querySelector(".header-container").style.background = "#414042";
   } else if (window.innerWIdth > 860){
     document.querySelector(".header-container").style.background = "none";
   }
