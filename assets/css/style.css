@@ -2183,6 +2183,10 @@ section.bc-3 header.bc3-header {
 }
 
 @media only screen and (max-width: 680px) {
+    .videoContainer {
+        display: none;
+    }
+    
     section.section-3 .s3-container {
         flex-wrap: wrap-reverse;
         width: 90%;
