@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;900&display=swap" rel="stylesheet">
+    <title>Ad Voca</title>
+    <link rel="shortcut icon" type="image/jpg" href="favicon.ico"/>
+</head>
+<body>
+
+    <div id="wrapper">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <img src="assets/logo.png" alt="Ad Voca Logo">
+                </a>
+                <button onclick="openNav()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" style="background: none;" >
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path stroke="rgba(237, 103, 68, 1)" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/></svg>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" >
+                  <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="/">Home</a>
+                    <a class="nav-item nav-link" href="works.html">Works</a>
+                    <a class="nav-item nav-link" href="about.html">About</a>
+                    <a class="nav-item nav-link active" href="contact.html">Contact</a>
+                  </div>
+                </div>
+
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><div>x</div></a>
+                    <a href="/">Home</a>
+                    <a href="works.html">Works</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>    
+        </nav>
+
+        <section class="contact-1">
+            <div class="container">
+                <h1 class="contact-h1-main">let's talk about it.</h1>
+
+                
+                <form action="thank-you.php" method="POST" class="contact-form-container slideshow-container" id="contactCircle">
+                    <div class="mySlides fade">
+                        <h3 class="contact-h3-main">1. What's your name?</h3>
+                        <input type="text" name="name">
+                        <progress value="16" max="100"></progress>
+                    </div>
+                      
+                    <div class="mySlides fade">
+                        <h3 class="contact-h3-main">2. What services would you need?</h3>
+                        <hr>
+
+                        <div class="services-checkbox">
+                            <div class="service-checkbox">
+                                <input type="checkbox" name="services" value="Brand Consulting" id="brandConsulting">
+                                <label for="brandConsulting">Brand Consulting</label>
+                            </div>
+                            <div class="service-checkbox">
+                                <input type="checkbox" name="services" value="Brand Strategy" id="brandStrat">
+                                <label for="brandStrat">Brand Strategy</label>
+                            </div>
+                            <div class="service-checkbox">
+                                <input type="checkbox" name="services" value="Brand Identity System" id="brandIdentity">
+                                <label for="brandIdentity">Brand Identity Systems</label>
+                            </div>
+                            <div class="service-checkbox">
+                                <input type="checkbox" name="services" value="Website Design" id="websiteDesign">
+                                <label for="websiteDesign">Website Design</label>
+                            </div>
+                        </div>
+                        <progress value="32" max="100"></progress>
+                    </div>
+                      
+                    <div class="mySlides fade">
+                        <h3 class="contact-h3-main">3. When are you looking to launch?</h3>
+                        <hr>
+
+                        <div class="services-checkbox">
+                            <div class="service-checkbox">
+                                <input type="radio" name="timeline" value="In 2 - 3 Months" id="brandConsulting">
+                                <label for="brandConsulting">In 2 - 3 Months</label>
+                            </div>
+                            <div class="service-checkbox">
+                                <input type="radio" name="timeline" value="In 4 - 6 Months" id="brandStrat">
+                                <label for="brandStrat">In 4 - 6 Months</label>
+                            </div>
+                            <div class="service-checkbox">
+                                <input type="radio" name="timeline" value="No Definite Timeline" id="brandIdentity">
+                                <label for="brandIdentity">No Definite Timeline</label>
+                            </div>
+                        </div>
+                        <progress value="48" max="100"></progress>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <h3 class="contact-h3-main">4. Your email?</h3>
+                        <input type="email" name="email">
+                        <progress value="64" max="100"></progress>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <h3 class="contact-h3-main">5. Your phone number?</h3>
+                        <input type="text" name="phone_number">
+                        <input type="submit" value="Submit">
+                        <progress value="80" max="100"></progress>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <h3 class="contact-h1-main">Thank you!</h3>
+                        <h3 class="contact-h1-main">We'll get back to you<br>very soon.</h3>
+                        <img src="assets/smile.png" class="w-50">
+                    </div>
+                      
+                    <a class="prev" id="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" id="next" onclick="plusSlides(1)">&#10095;</a>
+                </form>
+
+                <p class="contact-p">Or, you can email us at <a href="mailto:heyall@ad-voca.com">heyall@ad-voca.com</a></p>
+            </div>
+        </section>
+
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="footer-links">
+                            <a href="#">Terms of Services</a>
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Cookie Policy</a>
+                            <a href="#">Ads Info</a>
+                        </div>
+                        <p>© 2021 Ad Voca, Inc.</p>
+                    </div>
+                    <div class="col d-flex align-items-center justify-content-end">
+                        <div class="social-links">
+                            <a href="#">
+                                <img src="assets/facebook.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="assets/instagram.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="assets/Be.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Script Section -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
