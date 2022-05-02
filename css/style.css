@@ -2542,6 +2542,10 @@ img.mobile {
       linear-gradient(to left , black, rgba(0,128,128,0) 250px);
   }
 
+  .logo-carousel img {
+      margin: auto
+  }
+
 
 
 
