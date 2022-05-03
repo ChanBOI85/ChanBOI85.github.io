@@ -1080,12 +1080,14 @@ section.works-1 ul.w1-tablinks li a.active {
 
 section.ohub-1 .hero-img-container {
     width: 100%;
-    height: 400px;
-    background-image: url('../assets/yingchou-han-IJrIeCs3D4g-unsplash\ 1\ \(1\).jpg');
+    height: 100vh;
     background-size:cover;
     background-repeat: no-repeat;
     position: relative;
-    margin-top: 100px;
+}
+
+section.ohub-1 {
+    padding: 0px !important
 }
 
 section.ohub-1 .h1-main {
@@ -2636,4 +2638,55 @@ img.mobile {
     .tab button {
         text-align: left;
     }
+}
+
+/* Brands Page */
+.links-container {
+    background: rgba(247, 247, 247, 0.04);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 100px 70px;
+    height: 100vh
+}
+
+.links-container a {
+    margin: 10px 0px;
+    text-decoration: none;
+    color: white;
+}
+
+.links-container a.active {
+    color: #ED6744
+}
+
+.brands-container {
+    padding: 100px 0px 0px 0px;
+}
+
+.challenge, .solution, .deliverables {
+    padding: 120px 170px
+}
+
+table, th, td {
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-collapse: collapse;
+}
+
+.logos td img{
+    margin: auto
+}
+
+.logos p.body-small {
+    margin: 0px;
+    padding: 30px 0px
+}
+
+.carousel.slide img {
+    height: auto
+}
+
+.prev, .next {
+    color: #ED6744;
+    margin: 0px 20px !important
 }
