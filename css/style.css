@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -2666,7 +2667,7 @@ img.mobile {
     padding: 100px 0px 0px 0px;
 }
 
-.challenge, .solution, .deliverables {
+.div-challenge, .div-solution, .div-deliverables {
     padding: 120px 170px
 }
 
