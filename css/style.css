@@ -2412,11 +2412,13 @@ img.mobile {
 
 
 .full-width-works .works-img-container {
-    margin: 15px 0px
+    margin: 15px 0px;
+    cursor: pointer;
 }
 
 .works-img-container {
     overflow: hidden;
+    cursor: pointer;
 }
 
 .works-img-container img {
@@ -2676,6 +2678,7 @@ table, th, td {
 .logos td img{
     margin: auto
 }
+
 
 .logos p.body-small {
     margin: 0px;

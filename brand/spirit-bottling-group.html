@@ -10,146 +10,174 @@
     <title>Ad Voca</title>
     <link rel="shortcut icon" type="image/jpg" href="favicon.ico"/>
 </head>
-<body>
+<body class="brands">
 
     <div id="wrapper">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
                 <a class="navbar-brand" href="/">
-                    <img src="../assets/logo.png" alt="Ad Voca Logo">
+                    <img src="../assets/logo.png" alt="Ad Voca Logo" style="gray-scale: 100%">
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon" style="background: none;">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path stroke="rgba(237, 103, 68, 1)" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/></svg>
+                <button onclick="openNav()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" style="background: none;" >
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path stroke="white" stroke-linecap="round" stroke-miterlimit="10" stroke-width="4" d="M4 7h22M4 15h22M4 23h22"/></svg>
                     </span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="collapse navbar-collapse justify-content-end" >
                   <div class="navbar-nav">
                     <a class="nav-item nav-link" href="/">Home</a>
-                    <a class="nav-item nav-link active" href="../works.html">Works</a>
-                    <a class="nav-item nav-link" href="../about.html">About</a>
-                    <a class="nav-item nav-link" href="../contact.html">Contact</a>
+                    <a class="nav-item nav-link" href="works.html">Works</a>
+                    <a class="nav-item nav-link" href="about.html">About</a>
+                    <a class="nav-item nav-link button-default" href="contact.html">Contact Us</a>
                   </div>
+                </div>
+
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><div>x</div></a>
+                    <a href="/">Home</a>
+                    <a href="works.html">Works</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
                 </div>
             </div>    
         </nav>
 
         
-        <section class="ohub-1 sbg-1 d-flex align-items-center">
-            <div class="hero-img-container d-flex align-items-center justify-content-center">
-                <div class="hero-image">
-                    <img src="../assets/brands/SBG/Artboard 2@2x.png" alt="">
-                    <h1 class="h1-main">Spirit Bottling Group</h1>
+        <section class="ohub-1 d-flex align-items-center">
+            <img src="../assets/brands/SBG/hero-img.jpg" alt="" width="100%">
+        </section>
+
+        <div class="content-container" style="width: 98.5%; margin-right: auto">
+            <div class="row">
+                <div class="col-md-3 links-container d-flex flex-column justify-content-start">
+                    <a href="#" class="h5 active">CLIENT</a>
+                    <a href="#" class="h5">CHALLENGE</a>
+                    <a href="#" class="h5">SOLUTION</a>
+                    <a href="#" class="h5">DELIVERABLES</a>
+                </div>
+
+                <div class="col-md-9 brands-container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div style="padding: 0px 56px;">
+                                <h5 class="h5 color-white">CLIENT</h5>
+                                <h1 class="h1 color-white" style="color: #ED6744; margin-bottom: 36px">Spirit Bottling Group</h1>
+
+                                <p class="body-default color-white">Spirit Bottling Group Inc. (SBG) is a consultant/manufacturer for alcoholic beverages. Working in conjunction with our partner and alcoholic beverage license holder, Rock Bottom Distillery, SBG develops and manufactures alcohol based spirits and Ready-to-Drink beverages.</p>
+                                <p class="body-default color-white">Spirit Bottling Group was derived from the dual meaning of "Spirit" - high alcohol content beverages ("hard liquor") is known as "spirits". In addition, our company is founded on the idea that all gifts are given by God and entrusted to us for His glory. We are guided by the Holy Spirit in these efforts.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div style="padding: 0px 36px">
+                                <h5 class="h5 color-white">WHAT WE DID</h5>
+                                <br>
+                                <p class="body-default color-white">Brand redesign and identity</p>
+                                <p class="body-default color-white">Logo redesign</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <img src="../assets/brands/SBG/Free_Stationery_Mockup_4 1.png" alt="" class="w-100" style="margin: 100px 0px">
+
+                    <div class="challenge color-white">
+                        <h5 class="h5">CHALLENGE</h5>
+                        <br>
+                        <p class="body-default">Spirit’s primary goal is to be THE consultant for brand holders on alcoholic beverage manufacturing. And to be in a position where Spirit becomes owner of bottling manufacturing facilities that can supply and sustain brand holders for all their supply needs. From distilling to bottling.</p>
+                    </div>
+
+
+                    <div class="logos">
+                        <table style="width: 100%">
+                            <tr>
+                                <td align="center">
+                                    <img src="../assets/brands/SBG/official.png" alt="" style="width: 300px">
+                                </td>
+                                <td align="center">
+                                    <img src="../assets/brands/SBG/alternative.png" alt="" style="width: 300px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <p class="body-small color-white">OFFICIAL LOGO</p>
+                                </td>
+                                <td align="center">
+                                    <p class="body-small color-white">ALTERNATIVE LOGO</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="solution color-white">
+                        <h5 class="h5">SOLUTION</h5>
+                        <br>
+                        <p class="body-default">Spirit’s primary goal is to be THE consultant for brand holders on alcoholic beverage manufacturing. And to be in a position where Spirit becomes owner of bottling manufacturing facilities that can supply and sustain brand holders for all their supply needs. From distilling to bottling.</p>
+                    </div>
+
+                    <img src="../assets/brands/SBG/Group 54.png" alt="" class="w-100">
+
+                    <div class="deliverables color-white">
+                        <h5 class="h5">DELIVERABLES</h5>
+                        <br>
+                        <p class="body-default">We want to refresh the look of the logo into a more indentifiable symbol from the get-go.</p>
+                        <p class="body-default">By listening to the company’s needs, we want to come-up with a logo that can speak to both our target audience and stakeholders with the same tonality and emotional effect.With keywords such as: ‘Empowerment’, ‘Acceptance’, ‘Fresh Start’, the logo has to convey the message of ‘Safe Space’. And what more could portray that but to illustrate a roof over your head?</p>
+                        <p class="body-default">This message is a clear sign of what to expect with Opportunity Hub. A clear and simple approach to start a new beginning.</p>
+
+                        <ul>
+                            <li class="body-default">We want to refresh the look of the logo into a more indentifiable </li>
+                            <li class="body-default">And what more could portray that but to illustrate a roof over your head?</li>
+                            <li class="body-default">With keywords such as: ‘Empowerment’, ‘Acceptance’, ‘</li>
+                        </ul>
+                    </div>
+
+
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="../assets/brands/SBG/UIUX/2668.png" class="d-block w-100" alt="">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../assets/brands/SBG/UIUX/3.png" class="d-block w-100"  alt="">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../assets/brands/SBG/colors.png" class="d-block w-100"  alt="">
+                          </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+
+        <div class="container d-flex align-items-center justify-content-between" style="padding: 50px 0px; margin-bottom: 0px;">
+            <a href="xerogear.html" style="margin: 0px 20px; text-decoration: none;">
+                <div class="d-flex align-items-center justify-content-start">
+                    <img src="../assets/brands/OHUB/prev.png" alt="">
+                    <h5 class="h5 color-white prev" style="margin: 0px">PREVIOUS</h5>
+                </div>
+                <p class="body-large color-white" style="margin-top: 30px;">XeroGear</p>
+            </a>
+            <a href="ohub.html" style="margin: 0px 20px; text-decoration: none;">
+                <div class="d-flex align-items-center justify-content-end">
+                    <h5 class="h5 color-white prev" style="margin: 0px">NEXT</h5>
+                    <img src="../assets/brands/OHUB/next.png" alt="">
+                </div>
+                <p class="body-large color-white" style="margin-top: 30px;">Opportunity Hub</p>
+            </a>
+        </div>
         
-        <section class="ohub-2">
-            <div class="container">
-                <div class="row d-flex align-items-center justify-content-center">
-                    <div class="col-md-8 col-s-12">
-                        <div class="overview-container">
-                            <h1 class="ohub-main">The Overview</h1>
-
-                            <p class="ohub-subtext">Spirit Bottling Group Inc. (SBG) is a consultant/manufacturer for alcoholic beverages. Working in conjunction with our partner and alcoholic beverage license holder, Rock Bottom Distillery, SBG develops and manufactures alcohol based spirits and Ready-to-Drink beverages.</p>
-                            <p class="ohub-subtext">Spirit Bottling Group was derived from the dual meaning of "Spirit" - high alcohol content beverages ("hard liquor") is known as "spirits". In addition, our company is founded on the idea that all gifts are given by God and entrusted to us for His glory. We are guided by the Holy Spirit in these efforts.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-s-12 d-flex align-items-center justify-content-center" st>
-                        <div class="objectives-container d-flex align-items-center justify-content-center flex-column">
-                            <div class="logo-container">
-                                <img src="../assets/brands/SBG/logos/Vector (5).png" alt="">
-                            </div>
-
-                            <div>
-                                <h3 class="objectives">Objectives</h3>
-
-                                <ul class="objeactive-list">
-                                    <li>Brand redesign and identity.</li>
-                                    <li>Logo redesign.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="ohub-4">
-            <div class="featured-image">
-                <img src="../assets/brands/SBG/Free_Stationery_Mockup_4 1.png" alt="" class="w-100">
-            </div>
-            <div id="overview">
-                <div class="container">
-                    <h1 class="o4-main purple-circle">The Goal</h1>
-                    <p class="o4-p">Spirit’s primary goal is to be THE consultant for brand holders on alcoholic beverage manufacturing. And to be in a position where Spirit becomes owner of bottling manufacturing facilities that can supply and sustain brand holders for all their supply needs. From distilling to bottling.</p>
-                </div>
-                <div class="container ">
-                    <h1 class="o4-main purple-circle">The Logo</h1>
-                    <p class="o4-p">We envisioned a classy looking logo for Spirit – our inspiration draws heavily from a bygone era of class and virtue that would represent an air of sophistication that is rooted in the Deep South. The dove is a symbol of spirituality associated with the Holy Spirit with a wheat clutched in its beak. This best represents the state of mind of Spirit Bottling Group grounded in faith and virtue.</p>
-                </div>
-
-                <div class="container ">
-                    <h1 class="o4-main orange-circle">Official Logo</h1>
-                    
-                    <div class="official-logo d-flex justify-content-center">
-                        <img src="../assets/brands/SBG/logos/Vector (4).png" alt="" class="w-50">
-                    </div>
-                </div>
-
-                <div class="container ">
-                    <h1 class="o4-main orange-circle">Alternative Logo</h1>
-                    
-                    <div class="official-logo d-flex justify-content-center align-items-center">
-                        <img src="../assets/brands/SBG/Artboard 5@2x.png" alt="" class="w-50" style="height: auto">
-                        <img src="../assets/brands/SBG/Artboard 6@2x.png" alt="" class="w-50">
-                    </div>
-                </div>
-
-                <img src="../assets/brands/SBG/2.png" alt="" class="w-100">
-                <img src="../assets/brands/SBG/Group 54.png" alt="" class="w-100" style="margin-bottom: 100px;">
-
-                <div class="container">
-                    <h1 class="o4-main purple-circle">The Colors & Typography</h1>
-                </div>
-
-                <div class="container">
-                    <h1 class="o4-main orange-circle">Colors</h1>
-
-                    <div class="image-container d-flex align-items-center justify-content-center">
-                        <img src="../assets/brands/SBG/colors.png" alt="" class="w-50">
-                    </div>
-                </div>
-
-                <div class="container">
-                    <h1 class="o4-main orange-circle">Typography</h1>
-
-                    <div class="image-container d-flex align-items-center justify-content-center" style="margin: 100px 0px">
-                        <img src="../assets/brands/SBG/sbg.png" alt="" class="w-50">
-                    </div>
-                </div>
-
-                <div class="container">
-                    <h1 class="o4-main orange-circle">UI/UX DESIGN WORK</h1>
-                </div>
-
-                <img src="../assets/brands/SBG/UIUX/2669.png" alt="" class="w-100">
-                <img src="../assets/brands/SBG/UIUX/3.png" alt="" class="w-100">
-                <img src="../assets/brands/SBG/UIUX/2668.png" alt="" class="w-100">
-
-
-                <div class="container d-flex align-items-center justify-content-center" style="padding: 50px 0px; margin-bottom: 0px;">
-                    <a href="crab-to-go.html">
-                        <img src="../assets/brands/SBG/Group 94.png" alt="" class="w-100">
-                    </a>
-                </div>
-            </div>
-        </section>
 
         <footer class="site-footer">
             <div class="container">
-                <div class="row">
-                    <div class="col">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="footer-logo-container">
+                            <img src="../assets/footer-logo.png" alt="">
+                        </div>
                         <div class="footer-links">
                             <a href="#">Terms of Services</a>
                             <a href="#">Privacy Policy</a>
@@ -158,8 +186,18 @@
                         </div>
                         <p>© 2021 Ad Voca, Inc.</p>
                     </div>
-                    <div class="col d-flex align-items-center justify-content-end">
+                    <div class="col-md-6 d-flex flex-column align-items-end justify-content-end">
+                        <div class="menu-links">
+                            <a href="index.html">Home</a>
+                            <a href="index.html">Works</a>
+                            <a href="index.html">About</a>
+                            <a href="index.html">Contact Us</a>
+                        </div>
+
                         <div class="social-links">
+                            <a href="#">
+                                <img src="../assets/linkedin.svg" alt="">
+                            </a>
                             <a href="#">
                                 <img src="../assets/facebook.svg" alt="">
                             </a>
@@ -176,10 +214,19 @@
         </footer>
     </div>
 
+
+    
     <!-- Script Section -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <script>
+        $('.carousel').carousel({
+            interval: 2000
+        })
+    </script>
+
     <script src="../js/script.js"></script>
 </body>
 </html>
