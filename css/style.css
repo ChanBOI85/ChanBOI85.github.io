@@ -2719,3 +2719,43 @@ table, th, td {
     color: #ED6744;
     margin: 0px 20px !important
 }
+
+
+@media screen and (max-width: 780px) {
+    .links-container {
+        display: none !important
+    }
+
+    #client .col-md-4 {
+        padding: 30px
+    }
+
+    .content-container {
+        width: 100% !important
+    }
+
+    .div-challenge, .div-solution, .div-deliverables {
+        padding: 50px 
+    }
+
+    .logos img {
+        width: 100px !important;
+        padding: 20px 0px
+    }
+
+    .logos td {
+        width: 50% !important
+    }
+
+    #client h1 {
+        font-size: 40px !important
+    }
+
+    .brands .navbar {
+        background: linear-gradient(to bottom, black, transparent);
+    }
+
+    .section-1_1 .col-lg-4 {
+        padding: 0px
+    }
+}
