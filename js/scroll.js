@@ -16,4 +16,6 @@ window.onscroll = () => {
       li.classList.add("active");
     }
   });
+
+  scrollFunction()
 };

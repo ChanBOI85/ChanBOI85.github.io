@@ -97,7 +97,7 @@ body {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .body-default {
@@ -588,11 +588,25 @@ section.section-1 .container {
 }
 
 section.section-1 .container h1 {
-    font-size: 120px;
     color: #ED6744;
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
 }
+
+@media screen and (max-width: 470px) {
+    section.section-1 .container h1 {
+        font-size: 52px
+    }
+
+    section.section-1 .container {
+        margin-top: 50px
+    }
+
+    section.section-1 .container div div {
+        width: 100% !important
+    }
+}
+
 
 section.section-1 .container h1 span.yellow-period {
     color: #FFE266
@@ -1039,6 +1053,10 @@ section.s1-works h1.h1-main {
 
 section.works-1 {
     padding: 250px 0px 50px 0px;
+}
+
+.works-section {
+    padding-bottom: 0px;
 }
 
 section.works-1 h1.h1-main {

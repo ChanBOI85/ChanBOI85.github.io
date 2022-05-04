@@ -13,7 +13,7 @@
 <body class="brands">
 
     <div id="wrapper">
-        <nav class="navbar navbar-expand-lg navbar-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="position: absolute;">
             <div class="container">
                 <a class="navbar-brand" href="/">
                     <img src="../assets/logo.png" alt="Ad Voca Logo" style="gray-scale: 100%">
@@ -50,13 +50,13 @@
         <div class="content-container" style="width: 98.5%; margin-right: auto">
             <div class="row">
                 <div class="col-md-3 links-container d-flex flex-column justify-content-start">
-                    <a href="#" class="h5 active">CLIENT</a>
-                    <a href="#" class="h5">CHALLENGE</a>
-                    <a href="#" class="h5">SOLUTION</a>
-                    <a href="#" class="h5">DELIVERABLES</a>
+                    <a href="#client" class="h5 client active">CLIENT</a>
+                    <a href="#challenge" class="h5 challenge">CHALLENGE</a>
+                    <a href="#solution" class="h5 solution">SOLUTION</a>
+                    <a href="#deliverables" class="h5 deliverables">DELIVERABLES</a>
                 </div>
 
-                <div class="col-md-9 brands-container">
+                <div class="col-md-9 brands-container brands-section" id="client">
                     <div class="row">
                         <div class="col-md-8">
                             <div style="padding: 0px 56px;">
@@ -78,7 +78,7 @@
 
                     <img src="../assets/brands/OHUB/new.png" alt="" class="w-100" style="margin: 100px 0px">
 
-                    <div class="challenge color-white">
+                    <div class="div-challenge color-white brands-section" id="challenge">
                         <h5 class="h5">CHALLENGE</h5>
                         <br>
                         <p class="body-default">We want to refresh the look of the logo into a more indentifiable symbol from the get-go.</p>
@@ -110,7 +110,7 @@
                         </table>
                     </div>
 
-                    <div class="solution color-white">
+                    <div class="div-solution color-white brands-section" id="solution">
                         <h5 class="h5">SOLUTION</h5>
                         <br>
                         <p class="body-default">We want to refresh the look of the logo into a more indentifiable symbol from the get-go.</p>
@@ -122,7 +122,7 @@
 
                     <img src="../assets/brands/OHUB/hero-img.png" alt="" class="w-100">
 
-                    <div class="deliverables color-white">
+                    <div class="div-deliverables color-white brands-section" id="deliverables">
                         <h5 class="h5">DELIVERABLES</h5>
                         <br>
                         <p class="body-default">We want to refresh the look of the logo into a more indentifiable symbol from the get-go.</p>
@@ -238,5 +238,25 @@
     </script>
 
     <script src="../js/script.js"></script>
+    <script src="../js/scroll.js"></script>
+    <script>
+        window.onscroll = () => {
+        var current = "client";
+
+        sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            if (window.scrollY >= sectionTop - 80) {
+            current = section.getAttribute("id"); 
+            }
+        });
+
+        navLi.forEach((li) => {
+            li.classList.remove("active");
+            if (li.classList.contains(current)) {
+            li.classList.add("active");
+            }
+        });
+        };
+    </script>
 </body>
 </html>

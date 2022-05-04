@@ -12,7 +12,7 @@
 <body class="brands">
 
     <div id="wrapper">
-        <nav class="navbar navbar-expand-lg navbar-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="position: absolute;">
             <div class="container">
                 <a class="navbar-brand" href="/">
                     <img src="../assets/logo.png" alt="Ad Voca Logo" style="gray-scale: 100%">
@@ -203,7 +203,7 @@
 
     
     <!-- Script Section -->
-    <script src="../js/scroll.js"></script>
+    
     
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -216,5 +216,25 @@
     </script>
 
     <script src="../js/script.js"></script>
+    <script src="../js/scroll.js"></script>
+    <script>
+        window.onscroll = () => {
+        var current = "client";
+
+        sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            if (window.scrollY >= sectionTop - 80) {
+            current = section.getAttribute("id"); 
+            }
+        });
+
+        navLi.forEach((li) => {
+            li.classList.remove("active");
+            if (li.classList.contains(current)) {
+            li.classList.add("active");
+            }
+        });
+        };
+    </script>
 </body>
 </html>
