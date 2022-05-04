@@ -2547,8 +2547,11 @@ img.mobile {
   }
 
   .slide img {
-      height: 99px;
-      width: auto;
+    transform: scale(0.7);
+  }
+
+  .slide.smaller img {
+    transform: scale(0.5);
   }
 
   .slider {
