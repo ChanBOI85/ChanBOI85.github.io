@@ -2433,6 +2433,10 @@ img.mobile {
 .full-width-works .works-img-container {
     margin: 15px 0px;
     cursor: pointer;
+    max-height: 265.5px;
+    height: 265.5px;
+    display: flex;
+    align-items: center;
 }
 
 .works-img-container {
