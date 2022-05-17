@@ -460,9 +460,7 @@ body {
         text-transform: uppercase;
     }
 
-    .full-width-works .works-img-container {
-        height: auto !important;
-    }
+
 }
 
 
@@ -2454,11 +2452,12 @@ img.mobile {
 .full-width-works .works-img-container {
     margin: 15px 0px;
     cursor: pointer;
-    max-height: 265.5px;
-    height: 265.5px;
+    max-height: 265px;
+    min-height: 140px;
     display: flex;
     align-items: center;
 }
+
 
 .works-img-container {
     overflow: hidden;
@@ -2778,5 +2777,13 @@ table, th, td {
 
     .section-1_1 .col-lg-4 {
         padding: 0px
+    }
+}
+
+
+@media screen and (max-width: 570px) {
+    .full-width-works .works-img-container {
+        height: 205px;
+        max-height: 205px;
     }
 }
